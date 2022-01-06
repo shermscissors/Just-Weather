@@ -1,0 +1,10 @@
+html {
+    background-image: url(../../Assets/Photos/GFXR0031.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+body {
+    background-color: lightgray;
+    display: grid;
+}
