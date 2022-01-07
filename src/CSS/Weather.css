@@ -2,8 +2,11 @@ div {
 	background-color: lightgray;
 }
 .weather{
-    display: grid;
-    background-color: white;
+    /* display: grid; */
+    background-color: rgb(243, 242, 242);
+	grid-column: 1;
+	grid-row: 2 / span 2;
+
 }
 button {
 	border: 0;

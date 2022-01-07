@@ -5,17 +5,18 @@ import '../CSS/App.css';
 
 function App() {
 	return (
-		<body>
+		<div>
 			<nav>
 				<Navigation />
 			</nav>
 			<main>
 				<Weather />
+				<div id='placeholder-1'></div>
 			</main>
 			<footer>
 				<p>Credit: Stunt McCartney</p>
 			</footer>
-		</body>
+		</div>
 	);
 }
 
