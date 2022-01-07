@@ -1,16 +1,22 @@
 import Navigation from './Navigation';
 import Weather from './Weather';
 
-
-import '../CSS/App.css'
+import '../CSS/App.css';
 
 function App() {
-  return (
-    <div className="App">
-  <Navigation /> 
-  <Weather />
-    </div>
-  );
+	return (
+		<body>
+			<nav>
+				<Navigation />
+			</nav>
+			<main>
+				<Weather />
+			</main>
+			<footer>
+				<p>Credit: Stunt McCartney</p>
+			</footer>
+		</body>
+	);
 }
 
 export default App;
