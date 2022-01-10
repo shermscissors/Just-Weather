@@ -12,9 +12,11 @@ function App() {
 			<main>
 				<Weather />
 			</main>
-				<div id='sidebar'></div>
+			<div id='sidebar'></div>
 			<footer>
-				<h5><em>Credit: Stunt McCartney</em></h5>
+				<h5>
+					<em>Credit: Stunt McCartney</em>
+				</h5>
 			</footer>
 		</div>
 	);

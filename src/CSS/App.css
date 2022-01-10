@@ -52,3 +52,7 @@ footer{
 h5 {
     color: rgba(85, 193, 207, 0.74);
 }
+img{
+max-width: fit-content;
+max-height: fit-content;
+}
