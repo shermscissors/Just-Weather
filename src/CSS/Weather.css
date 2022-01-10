@@ -1,0 +1,87 @@
+div {
+	background-color: rgb(209, 209, 209);
+}
+.weather {
+	display: grid;
+	/* gap: 2%; */
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 2fr 1fr 1fr;
+	grid-column: 1;
+	grid-row: 2 / span 2;
+}
+#weather-search {
+	grid-column: 1 / span 3;
+	grid-row: 1;
+	margin: 10px auto;
+	width: 98%;
+	height: 100%;
+}
+#weather-current-conditions {
+	display: grid;
+	background-color: white;
+	margin: 20px;
+	padding: 30px;
+	grid-column: 1;
+	grid-row: 2 / span 3;
+	border: 1px solid rgb(155, 155, 155);
+	border-radius: 3px;
+}
+#weather-forecast {
+	display: grid;
+	grid-column: 2 / span 2;
+	grid-row: 2;
+	background-color: white;
+	margin: 20px;
+	padding: 30px;
+	border: 1px solid rgb(155, 155, 155);
+}
+#weather-condition-image {
+    grid-column: 3;
+    grid-row: 3/ span 2;
+	background-color: white;
+	margin: 0px 20px 20px 20px;
+	padding: 30px;
+	border: 1px solid rgb(155, 155, 155);
+}
+#weather-sunrise{
+    background-color: white;
+	margin: 0px 0 20px 20px;
+	padding: 30px;
+	border: 1px solid rgb(155, 155, 155);
+    grid-row: 3 /span 2 ;
+}
+
+form {
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+}
+.search-button {
+	height: 101%;
+	width: 19.5%;
+	border: 0;
+}
+button:hover {
+	background-color: rgba(85, 193, 207, 0.74);
+	border: 0;
+	color: white;
+	cursor: pointer;
+}
+input {
+	width: 78%;
+	height: 98%;
+	border: 0;
+	padding: 0 0 0 20px;
+	color: rgb(102, 102, 102);
+	background-color: rgb(225, 252, 255);
+	transition: width 0.2s ease-in-out;
+}
+input:focus {
+	outline: none;
+	color: rgb(102, 102, 102);
+	cursor: pointer;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 500;
+}
