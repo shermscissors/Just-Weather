@@ -1,8 +1,13 @@
 #nav-bar {
    background-color: rgba(85, 193, 207, 0.74);
     width: 100%; 
+    margin: 0;
+    padding: 5px 0;
+    opacity: .4;
+
 }
-h1 {
-    color: rgb(245, 241, 241);
-    padding: 2%;
+#title {
+    color: rgb(255, 255, 255);
+    padding: 0 2%;
+    opacity: 1;
 }

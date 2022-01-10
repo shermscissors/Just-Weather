@@ -1,20 +1,54 @@
 html {
-	background-image: url(../../Assets/Photos/GFXR0031.jpg);
-	background-position: center;
+	background-image: url(../../Assets/Photos/GFXR0031.jpg), linear-gradient(black,white) ;
+	background-position: center center;
 	background-repeat: no-repeat;
 	image-rendering: optimizeSpeed;
-	background-size: cover;
-	transition: 2s;
+	background-size: 4096px 3160px;
+    background-attachment: scroll;
+    transition-delay: 1s;	
+    transform-origin: center;
+    transition-duration: 2500ms;
 }
-div {
+#home {
+    display: grid;
 	margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr .05fr;
+    grid-template-rows: .1fr 2fr .1fr;
+}
+nav{
+    grid-row: 1;
+    grid-column: 1 / span 4;
+    margin: 0;
+    padding: 0;
 }
 body {
-	padding: 40px 30px;
+	padding: 100px 30px;
+    margin: 0 auto;
 }
 main{
+    padding: 0;
+    margin: 0;
+    grid-column: 1/ span 3;
+    grid-row: 2;
 	display: grid;
-	grid-template-columns: 2fr 3fr 1fr;
-	grid-template-rows: 1fr 3fr 1fr;
 
+}
+#sidebar{
+    width: 100%;
+    grid-row: 2/ span 2;
+    background-color: rgba(85, 193, 207, 0.74);
+    opacity: .4;
+
+}
+footer{
+    display: flex;
+    background-color: white;
+    justify-content: end;
+    padding: 1px 2%;
+    align-items: center;
+    grid-column: 1/ span 3;
+    grid-row: 3;
+}
+h5 {
+    color: rgba(85, 193, 207, 0.74);
 }

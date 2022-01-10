@@ -5,16 +5,16 @@ import '../CSS/App.css';
 
 function App() {
 	return (
-		<div>
+		<div id='home'>
 			<nav>
 				<Navigation />
 			</nav>
 			<main>
 				<Weather />
-				<div id='placeholder-1'></div>
 			</main>
+				<div id='sidebar'></div>
 			<footer>
-				<p>Credit: Stunt McCartney</p>
+				<h5><em>Credit: Stunt McCartney</em></h5>
 			</footer>
 		</div>
 	);
