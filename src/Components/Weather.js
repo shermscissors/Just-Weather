@@ -9,7 +9,7 @@ import '../CSS/Weather.css';
 
 export default function Weather(props) {
 	const [search, setSearch] = useState('new york');
-	const [forecast, setForecast] = useState();
+	const [forecast, setForecast] = useState(null);
 
 	const key = process.env.REACT_APP_API_KEY;
 
@@ -27,9 +27,11 @@ export default function Weather(props) {
 		const url = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${search}&days=3&aqi=no&alerts=no`;
 
 		fetch(url)
-			.then((forecast) => forecast.json())
+			.then((res) => res.json())
 
-			.then((forecast) => setForecast(forecast.results))
+			.then((res) => {
+				console.log(res)
+				setForecast(res)})
 
 			.catch(console.error);
 		console.log('Loading...');
@@ -56,15 +58,23 @@ export default function Weather(props) {
 				</form>
 			</div>
 			<CurrentConditons
-				city={props.location}
-				localTime={props.localTime}
-				temperature={props.temperature}
-				condition={props.condition}
-				wind={props}
+				city={forecast?.location.name}
+				localTime={forecast?.location.localtime}
+				temperature={forecast?.current.temp_f}
+				condition={forecast?.current.condition.text}
+				wind={forecast?.current.wind_mph}
 			/>
-			<Forecast />
-			<ConditionImage />
-			<Sunrise />
+			<Forecast
+				high={forecast?.forecast.forecastday[1].day.maxtemp_f}
+				low={forecast?.forecast.forecastday[1].day.mintemp_f}
+				rain={forecast?.forecast.forecastday[1].day.daily_chance_of_rain}
+			/>
+			<ConditionImage photo={forecast?.current.condition.icon}/>
+			<Sunrise
+				sunrise={forecast?.forecast.forecastday[0].astro.sunrise}
+				sunset={forecast?.forecast.forecastday[0].astro.sunset}
+				moon={forecast?.forecast.forecastday[0].astro.moon_phase}
+			/>
 		</div>
 	);
 }

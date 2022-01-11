@@ -22,6 +22,10 @@ div {
 	margin: 20px;
 	padding: 30px;
 	grid-column: 1;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.6fr 0.1fr 0.1fr 0.1fr 0.1fr;
+	align-content: center;
+	justify-items: center;
 	grid-row: 2 / span 3;
 	border: 1px solid rgb(155, 155, 155);
 	border-radius: 3px;
@@ -30,25 +34,40 @@ div {
 	display: grid;
 	grid-column: 2 / span 2;
 	grid-row: 2;
+	align-content: center;
+	justify-items: center;
 	background-color: white;
 	margin: 20px;
 	padding: 30px;
 	border: 1px solid rgb(155, 155, 155);
 }
 #weather-condition-image {
-    grid-column: 3;
-    grid-row: 3/ span 2;
+	display: grid;
+	grid-column: 3;
+	grid-row: 3 / span 2;
 	background-color: white;
 	margin: 0px 20px 20px 20px;
-	padding: 30px;
 	border: 1px solid rgb(155, 155, 155);
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 }
-#weather-sunrise{
-    background-color: white;
+#actual-condition {
+	display: grid;
+	grid-column: 2;
+	grid-row: 2;
+	justify-items: center;
+	align-content: center;
+	background-color: white;
+}
+#weather-sunrise {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	background-color: white;
 	margin: 0px 0 20px 20px;
 	padding: 30px;
 	border: 1px solid rgb(155, 155, 155);
-    grid-row: 3 /span 2 ;
+	grid-row: 3 / span 2;
 }
 
 form {
@@ -84,4 +103,35 @@ input:focus {
 p {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 500;
+}
+a {
+	color: rgb(233, 233, 233);
+	padding: 2%;
+	stop-opacity: 0;
+	height: 100%;
+	font-size: 22px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-decoration: none;
+}
+h1{
+	stop-opacity: 0;
+}
+h2{
+	font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+	font-family: Arial, Helvetica, sans-serif;
+}
+h4{
+	font-family: Arial, Helvetica, sans-serif;
+}
+h5 {
+    color: rgba(85, 193, 207, 0.74);
+}
+.underline {
+	border-bottom: 2px solid rgb(218, 218, 218);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
 }
