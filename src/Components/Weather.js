@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import CurrentConditons from './CurrentConditions';
 import Forecast from './Forecast';
@@ -14,8 +14,7 @@ export default function Weather(props) {
 	const key = process.env.REACT_APP_API_KEY;
 
 	function handleChange(event) {
-		setSearch(event.target.value);
-		console.log(event.target.value);
+		setSearch(event.target.value);;
 		event.preventDefault();
 	}
 	function handleSubmit(event) {
@@ -34,6 +33,9 @@ export default function Weather(props) {
 			.catch(console.error);
 		console.log('Loading...');
 	}
+	useEffect(() => {
+		getWeather()
+	},[])
 
 	return (
 		<div className='weather'>
