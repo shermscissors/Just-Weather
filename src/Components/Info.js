@@ -1,8 +1,9 @@
 export default function Info() {
 	return (
-		<div>
+		<div id="info">
 			<h1>Info</h1>
-			<p>This is the info page</p>
+			<p><em>just weather</em> is a simple, clean intuitive web application built to tell one thing: just weather</p>
+			<p>What more is there to know?</p>
 		</div>
 	);
 }

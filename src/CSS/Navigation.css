@@ -4,10 +4,12 @@
     margin: 0;
     padding: 5px 0;
     opacity: .4;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #title {
     color: rgb(255, 255, 255);
     padding: 0 2%;
-    opacity: 1;
+    stop-opacity: 0;
 }
