@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import CurrentConditons from './CurrentConditions';
 import Forecast from './Forecast';
@@ -28,18 +28,12 @@ export default function Weather(props) {
 
 		fetch(url)
 			.then((res) => res.json())
-
 			.then((res) => {
-				console.log(res)
 				setForecast(res)})
 
 			.catch(console.error);
 		console.log('Loading...');
 	}
-	useEffect(() => {
-		getWeather();
-		console.log('Loading again...');
-	}, []);
 
 	return (
 		<div className='weather'>

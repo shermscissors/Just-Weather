@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Info from './Info';
-
 import '../CSS/Navigation.css';
 
 export default function Navigation(props) {
